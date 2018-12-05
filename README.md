@@ -1,5 +1,6 @@
 # Advent of Other People's Code
 Fetches random solutions to a specified Advent of Code puzzle from GitHub and runs them against your input
+![Grinch](grinch.png)
 ## Usage
 Let me rephrase. This is going to get some random code from GitHub and run it on your machine. Don't use it.
 
