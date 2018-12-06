@@ -17,9 +17,7 @@ pip install -r requirements.txt
 ```
 
 ### Genrate a GitHub personal access token
-[Right here](https://github.com/settings/tokens/new)
-
-TBA: scopes
+[Right here](https://github.com/settings/tokens/new), with the `public_repo` scope.
 
 ### Run it
 Please, don't!
