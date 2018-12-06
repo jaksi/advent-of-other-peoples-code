@@ -18,6 +18,7 @@ pip install -r requirements.txt
 
 ### Genrate a GitHub personal access token
 [Right here](https://github.com/settings/tokens/new)
+
 TBA: scopes
 
 ### Run it
@@ -25,5 +26,5 @@ Please, don't!
 
 ### I said run it!
 ```sh
-python advent.py --token $GITHUB_TOKEN --year 2018 --day 1 --part 1 --input input.txt
+python advent.py --token $GITHUB_TOKEN --year 2018 --day 1 --input input.txt
 ```
