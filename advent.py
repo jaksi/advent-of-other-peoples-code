@@ -1,8 +1,6 @@
 import argparse
 import builtins
-import random
 import re
-import sys
 
 from github import Github
 
@@ -18,8 +16,8 @@ def run(github_file):
     print("Running it, stand back.")
     try:
         exec(github_file.decoded_content)
-    except Exception as e:
-        print(e)
+    except:
+        print("It raised an exception.")
         return False
 
     print("Was that the right answer?")
