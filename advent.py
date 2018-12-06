@@ -34,14 +34,17 @@ def main():
 
     file_pattern = re.compile(r'[^\d]*[^1-9]{day}\.py'.format(day=args.day))
 
+    print("Patching open() to always return your input file")
     original_open = builtins.open
     builtins.open = lambda *_args, **_kwargs: original_open(args.input)
 
+    print("Searching for repositories")
     github = Github(args.token)
     repositories = github.search_repositories('advent of code {year}'.format(year=args.year),
                                               sort='updated',
                                               language='python')
     for repository in repositories:
+        print("Searching for a solution in {repository}".format(repository=repository.full_name))
         tree = repository.get_git_tree('master', recursive=True).tree
         matching_files = [element for element in tree if element.type == 'blob' and file_pattern.match(element.path)]
         success = False
